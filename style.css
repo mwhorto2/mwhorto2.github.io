@@ -88,12 +88,10 @@ body {
   transform: translateY(-2px);
 }
 
-/* remove default details marker */
 .menu summary { list-style: none; }
 .menu summary::-webkit-details-marker { display: none; }
 .menu { position: relative; }
 
-/* dropdown panel */
 .menu-panel {
   position: absolute;
   top: 44px;
@@ -229,9 +227,7 @@ body {
   font-size: 30px;
 }
 
-.muted {
-  color: var(--muted);
-}
+.muted { color: var(--muted); }
 
 .chips {
   display: flex;
@@ -250,9 +246,7 @@ body {
   border: 1px solid var(--border);
 }
 
-.chip:hover {
-  background: rgba(108,99,255,0.35);
-}
+.chip:hover { background: rgba(108,99,255,0.35); }
 
 .rec-list {
   list-style: none;
@@ -280,6 +274,66 @@ body {
 .rec-title a:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+/* ===== SLIDER FULL WIDTH + TALLER ===== */
+.slider-panel {
+  margin-top: 40px;
+}
+
+.slider {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 18px;
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 2;
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  width: 400%;
+  animation: slideShow 16s infinite;
+}
+
+.slides a {
+  flex: 0 0 25%;
+  height: 100%;
+  display: block;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+
+.slider:hover .slides {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+@keyframes slideShow {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+
+  25% { transform: translateX(-25%); }
+  45% { transform: translateX(-25%); }
+
+  50% { transform: translateX(-50%); }
+  70% { transform: translateX(-50%); }
+
+  75% { transform: translateX(-75%); }
+  95% { transform: translateX(-75%); }
+
+  100% { transform: translateX(0); }
 }
 
 /* ===== TABLE WRAP (prevents broken layout) ===== */
@@ -360,7 +414,6 @@ body {
 
 .anime-table a:hover { text-decoration: underline; color: #ffffff; }
 
-/* ===== Anime cell (image + name) FIX ===== */
 .anime-cell {
   display: grid;
   grid-template-columns: 110px 1fr;
@@ -419,64 +472,5 @@ body {
   .hero h2 { font-size: 40px; }
   .hero p { font-size: 18px; }
   .content-grid { grid-template-columns: 1fr; }
+  .slider { height: 360px; }
 }
-/* ===== ROTATING IMAGE SLIDER ===== */
-.slider {
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-  border-radius: 16px;
-  margin-top: 16px;
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
-
-.slides {
-  display: flex;
-  height: 100%;
-  width: 400%;
-  animation: slideShow 16s infinite;
-}
-
-.slides a {
-  flex: 0 0 25%;
-  height: 100%;
-  display: block;
-}
-
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.slides a:hover img {
-  transform: scale(1.02);
-  transition: 0.25s;
-}
-
-@keyframes slideShow {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(0); }
-
-  25% { transform: translateX(-25%); }
-  45% { transform: translateX(-25%); }
-
-  50% { transform: translateX(-50%); }
-  70% { transform: translateX(-50%); }
-
-  75% { transform: translateX(-75%); }
-  95% { transform: translateX(-75%); }
-
-  100% { transform: translateX(0); }
-}
-.slider:hover .slides {
-  animation-play-state: paused;
-  cursor: pointer;
-}
-.slider {
-  position: relative;
-  z-index: 2;
-}
-
