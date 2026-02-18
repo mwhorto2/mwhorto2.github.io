@@ -1,0 +1,58 @@
+/* home.css */
+@import url("site.css");
+
+.home-hero{
+  border:1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgba(124,77,255,0.18), rgba(34,211,238,0.10)),
+    rgba(255,255,255,0.06);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 16px 40px rgba(0,0,0,0.28);
+}
+
+.home-hero h2{margin:0 0 10px}
+.home-hero p{margin:0; color:var(--muted); line-height:1.5}
+
+.home-grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:18px;
+}
+
+.feature-card{
+  border:1px solid var(--border);
+  background:var(--card);
+  border-radius:18px;
+  padding:14px;
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:14px;
+  align-items:start;
+}
+
+.feature-card img{
+  width:220px;
+  height:auto;
+  display:block;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.feature-card h3{margin:0 0 8px}
+.feature-card p{margin:0; color:var(--muted); line-height:1.5}
+
+.side-cards{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.side-cards .card p{margin:0; color:var(--muted); line-height:1.5}
+
+@media (max-width: 800px){
+  .home-grid{grid-template-columns:1fr}
+  .feature-card{grid-template-columns:1fr}
+  .feature-card img{width:100%}
+}
