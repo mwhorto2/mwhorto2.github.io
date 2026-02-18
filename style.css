@@ -33,12 +33,25 @@ body {
 }
 
 .site-title {
-  font-size: 56px;
+  font-size: 72px;
   margin: 0;
-  color: var(--secondary);
-  letter-spacing: 1px;
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1f2a44;
+  font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
+.site-title::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 5px;
+  margin: 14px auto 0;
+  background: linear-gradient(90deg, #4c6ef5, #ff4d6d);
+  border-radius: 6px;
+}
+
 
 /* ===== NAV TOP RIGHT ===== */
 .site-nav {
