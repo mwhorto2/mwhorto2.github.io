@@ -1,29 +1,29 @@
 :root {
   --text: #e6e8ff;
-  --background: #0f1226;
+  --muted: #cdd2ff;
+  --bg1: #0b0e22;
+  --bg2: #141833;
+  --panel: rgba(21, 25, 51, 0.72);
+  --panelSolid: #151933;
+  --border: rgba(255,255,255,0.10);
+  --border2: rgba(255,255,255,0.16);
   --primary: #6c63ff;
-  --secondary: #151933;
   --accent: #ff4d8d;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--text);
-
   background:
     radial-gradient(circle at 20% 20%, rgba(108,99,255,0.25), transparent 40%),
     radial-gradient(circle at 80% 30%, rgba(255,77,141,0.18), transparent 40%),
-    linear-gradient(180deg, #0b0e22, #141833 60%, #0b0e22);
-
+    linear-gradient(180deg, var(--bg1), var(--bg2) 60%, var(--bg1));
   background-attachment: fixed;
 }
 
-/* ===== WRAPPER ===== */
 #wrapper {
   width: 95%;
   max-width: 1500px;
@@ -39,43 +39,42 @@ body {
 }
 
 .site-title {
+  margin: 0;
   font-size: 72px;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ffffff;
-  text-shadow: 0 8px 30px rgba(108,99,255,0.6);
+  text-shadow: 0 10px 34px rgba(108,99,255,0.55);
 }
 
-}
 .site-title::after {
   content: "";
   display: block;
-  width: 140px;
+  width: 150px;
   height: 5px;
   margin: 14px auto 0;
-  background: linear-gradient(90deg, #4c6ef5, #ff4d6d);
-  border-radius: 6px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 8px;
 }
 
-
-/* ===== NAV TOP RIGHT ===== */
+/* ===== NAV (TOP RIGHT) ===== */
 .site-nav {
   position: fixed;
-  top: 22px;
-  right: 36px;
+  top: 18px;
+  right: 28px;
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 34px;
   z-index: 9999;
 }
 
 .site-nav a,
 .site-nav summary {
   text-decoration: none;
-  font-weight: 750;
-  font-size: 28px;
-  color: var(--secondary);
+  font-weight: 800;
+  font-size: 26px;
+  color: #ffffff;
   background: none;
   border: none;
   padding: 0;
@@ -90,16 +89,9 @@ body {
 }
 
 /* remove default details marker */
-.menu summary {
-  list-style: none;
-}
-.menu summary::-webkit-details-marker {
-  display: none;
-}
-
-.menu {
-  position: relative;
-}
+.menu summary { list-style: none; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu { position: relative; }
 
 /* dropdown panel */
 .menu-panel {
@@ -107,58 +99,54 @@ body {
   top: 44px;
   right: 0;
   width: 240px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  background: rgba(15, 18, 38, 0.95);
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
   overflow: hidden;
   display: none;
+  backdrop-filter: blur(10px);
 }
 
-.menu[open] .menu-panel {
-  display: block;
-}
+.menu[open] .menu-panel { display: block; }
 
 .menu-panel a {
   display: block;
-  padding: 16px 18px;
+  padding: 14px 16px;
   font-size: 18px;
-  color: var(--text);
-  font-weight: 650;
-  border-bottom: 1px solid #eee;
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.menu-panel a:last-child {
-  border-bottom: none;
-}
+.menu-panel a:last-child { border-bottom: none; }
 
 .menu-panel a:hover {
-  background: #f3f5ff;
-  color: var(--accent);
+  background: rgba(108,99,255,0.14);
+  color: #ffffff;
 }
 
-/* ===== HERO (USED ON ROMANCE + FANTASY) ===== */
+/* ===== HERO ===== */
 .hero {
-  margin: 24px auto 40px;
+  margin: 24px auto 34px;
   border-radius: 22px;
-  padding: 70px 40px;
+  padding: 60px 46px;
   color: #fff;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
   position: relative;
   overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 55%);
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.16), transparent 55%);
   pointer-events: none;
 }
 
-.hero-inner {
-  position: relative;
-  max-width: 900px;
-}
+.hero-inner { position: relative; max-width: 980px; }
 
 .hero h2 {
   margin: 0 0 10px;
@@ -170,7 +158,7 @@ body {
   margin: 0 0 18px;
   font-size: 20px;
   line-height: 1.7;
-  opacity: 0.95;
+  color: var(--muted);
 }
 
 .hero-btn {
@@ -179,188 +167,155 @@ body {
   border-radius: 12px;
   background: rgba(255,255,255,0.92);
   color: #0f1020;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
   transition: 0.2s;
 }
 
-.hero-btn:hover {
-  transform: translateY(-2px);
-}
+.hero-btn:hover { transform: translateY(-2px); }
 
-.hero-fantasy {
-  background: linear-gradient(135deg, #1f4c5c, #3b5bdb);
-}
+.hero-fantasy { background: linear-gradient(135deg, #1f4c5c, #3b5bdb); }
+.hero-romance { background: linear-gradient(135deg, #7b2cbf, #ff4d6d); }
 
-.hero-romance {
-  background: linear-gradient(135deg, #7b2cbf, #ff4d6d);
-}
-
-/* ===== FEATURE BOX (OPTIONAL) ===== */
-.feature {
-  border: 2px solid var(--secondary);
-  padding: 40px;
-  text-align: center;
-  margin: 40px auto;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-  max-width: 900px;
-}
-
-.feature h2 {
-  margin-top: 0;
-  font-size: 32px;
-  color: var(--secondary);
-}
-
-/* ===== TABLE SECTION ===== */
-.table-box,
-.feature {
-  background: rgba(21, 25, 51, 0.75);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+/* ===== TABLE WRAP (prevents broken layout) ===== */
+.table-box {
+  margin-top: 26px;
+  background: var(--panel);
+  border: 1px solid var(--border);
   border-radius: 18px;
+  box-shadow: 0 22px 55px rgba(0,0,0,0.45);
+  backdrop-filter: blur(14px);
+  padding: 26px;
 }
 
+.table-box h3 {
+  margin: 0 0 16px;
+  font-size: 30px;
+  color: #ffffff;
+}
 
+/* This is the big fix: if screen is smaller, scroll horizontally instead of breaking */
+.table-wrap {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+/* ===== TABLE ===== */
 .anime-table {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  table-layout: fixed;
+  min-width: 1100px;            /* forces clean columns */
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;           /* IMPORTANT: stops the weird squeezing */
 }
 
 .anime-table th,
 .anime-table td {
-  border: 1px solid #ddd;
-  padding: 22px;
+  padding: 18px 18px;
+  border-right: 1px solid rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
   vertical-align: top;
 }
 
-.anime-table th {
-  background: #f1f3fb;
-  font-size: 22px;
-}
+.anime-table th:first-child,
+.anime-table td:first-child { border-left: 1px solid rgba(255,255,255,0.10); }
 
-.anime-table td {
+.anime-table thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 12, 28, 0.95);
+  color: #ffffff;
   font-size: 20px;
-  line-height: 1.6;
+  text-align: left;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  z-index: 2;
 }
 
-/* column widths */
-.anime-table th:nth-child(1),
-.anime-table td:nth-child(1) { width: 22%; }
+/* rounded corners */
+.anime-table thead th:first-child { border-top-left-radius: 14px; }
+.anime-table thead th:last-child  { border-top-right-radius: 14px; }
+.anime-table tbody tr:last-child td:first-child { border-bottom-left-radius: 14px; }
+.anime-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 14px; }
 
-.anime-table th:nth-child(2),
-.anime-table td:nth-child(2) { width: 14%; }
+/* Column sizing (stable and readable) */
+.anime-table th:nth-child(1), .anime-table td:nth-child(1) { width: 280px; }
+.anime-table th:nth-child(2), .anime-table td:nth-child(2) { width: 170px; }
+.anime-table th:nth-child(3), .anime-table td:nth-child(3) { width: 190px; }
+.anime-table th:nth-child(4), .anime-table td:nth-child(4) { width: 520px; }
+.anime-table th:nth-child(5), .anime-table td:nth-child(5) { width: 320px; }
 
-.anime-table th:nth-child(3),
-.anime-table td:nth-child(3) { width: 16%; }
-
-.anime-table th:nth-child(4),
-.anime-table td:nth-child(4) { width: 28%; }
-
-.anime-table th:nth-child(5),
-.anime-table td:nth-child(5) { width: 20%; }
-
-/* anime cell */
-.anime-cell {
-  display: flex;
-  gap: 18px;
-  font-weight: 750;
-  font-size: 22px;
-  align-items: flex-start;
-}
-
-.anime-img {
-  width: 140px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+/* Text */
+.anime-table td {
+  font-size: 19px;
+  line-height: 1.65;
+  color: #e8ebff;
 }
 
 .anime-table a {
-  color: #2d46ff;
-  font-weight: 750;
+  color: #93a0ff;
+  font-weight: 800;
   text-decoration: none;
 }
 
-.anime-table a:hover {
-  text-decoration: underline;
+.anime-table a:hover { text-decoration: underline; color: #ffffff; }
+
+/* ===== Anime cell (image + name) FIX ===== */
+.anime-cell {
+  display: grid;
+  grid-template-columns: 110px 1fr; /* stable */
+  gap: 14px;
+  align-items: start;
 }
 
-/* video */
-iframe {
+.anime-cell span,
+.anime-cell {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.anime-img {
+  width: 110px;
+  height: 160px;
+  object-fit: cover;
   border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.40);
+}
+
+.anime-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 26px rgba(255,77,141,0.55);
+  transition: 0.25s;
+}
+
+/* Trailer embeds */
+.anime-table iframe {
   width: 100%;
-  height: 200px;
+  height: 190px;
   border: 0;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
-  border: 2px solid var(--secondary);
-  padding: 30px;
-  text-align: center;
   margin-top: 60px;
-  font-weight: bold;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--secondary), var(--accent));
-  color: white;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-/* ===== GLOBAL TEXT FIX ===== */
-body {
-  color: #f1f3ff;
-}
-
-/* main headings */
-h1, h2, h3 {
+  padding: 28px;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: linear-gradient(135deg, rgba(21,25,51,0.85), rgba(255,77,141,0.18));
   color: #ffffff;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
 }
 
-/* paragraph text */
-p {
-  color: #d6dbff;
+/* ===== MOBILE TWEAKS ===== */
+@media (max-width: 900px) {
+  .site-title { font-size: 54px; }
+  .site-nav a, .site-nav summary { font-size: 20px; gap: 18px; }
+  .hero { padding: 44px 24px; }
+  .hero h2 { font-size: 40px; }
+  .hero p { font-size: 18px; }
 }
-
-/* nav links top right */
-.site-nav a,
-.site-nav summary {
-  color: #ffffff;
-}
-
-/* hover glow */
-.site-nav a:hover,
-.site-nav summary:hover {
-  color: #ff77aa;
-}
-
-/* table text */
-.anime-table td {
-  color: #e6e9ff;
-}
-
-/* table headers */
-.anime-table th {
-  color: #ffffff;
-  background: rgba(255,255,255,0.08);
-}
-
-/* description cells */
-.desc {
-  color: #dfe3ff;
-}
-
-/* feature box text */
-.feature {
-  color: #e6e9ff;
-}
-
-/* footer */
-.site-footer {
-  color: white;
-}
-
