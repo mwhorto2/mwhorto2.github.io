@@ -303,6 +303,9 @@ main {
   display: flex;
   transition: transform 0.45s ease;
 }
+.carousel-track { flex-wrap: nowrap; }
+.carousel-slide { overflow: hidden; }
+.carousel-slide img { max-width: 100%; }
 
 .carousel-slide {
   flex: 0 0 25%;
