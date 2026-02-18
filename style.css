@@ -13,8 +13,14 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg, #b7b6e6, #9fa0cf);
   color: var(--text);
+
+  background:
+    radial-gradient(circle at 20% 20%, rgba(108,99,255,0.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255,77,141,0.18), transparent 40%),
+    linear-gradient(180deg, #0b0e22, #141833 60%, #0b0e22);
+
+  background-attachment: fixed;
 }
 
 /* ===== WRAPPER ===== */
