@@ -178,25 +178,16 @@ body {
   box-shadow: 0 20px 50px rgba(0,0,0,0.45);
 }
 
-.about-box { max-width: 900px; margin: 0 auto; text-align: center; }
-
-.panel h2,
-.about-box h3 {
-  margin-top: 0;
-  font-size: 34px;
-}
-
-.about-box p,
-.panel p { color: var(--muted); }
-
-/* TABLE */
+/* TABLE WRAP (IMPORTANT) */
 .table-wrap {
   width: 100%;
   overflow-x: auto;
 }
 
+/* TABLE */
 .anime-table {
   width: 100%;
+  min-width: 1100px;
   border-collapse: collapse;
   margin-top: 20px;
   table-layout: fixed;
@@ -207,6 +198,8 @@ body {
   border: 1px solid rgba(255,255,255,0.15);
   padding: 22px;
   vertical-align: top;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .anime-table th {
