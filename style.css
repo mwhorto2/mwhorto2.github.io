@@ -1,89 +1,3 @@
-.content-grid {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-.panel {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 26px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
-}
-
-.panel h2 {
-  margin-top: 0;
-  font-size: 30px;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.chip {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  text-decoration: none;
-  font-weight: 800;
-  color: #fff;
-  border: 1px solid var(--border);
-}
-
-.chip:hover {
-  background: rgba(108,99,255,0.35);
-}
-
-.rec-list {
-  list-style: none;
-  padding: 0;
-  margin: 14px 0 0;
-}
-
-.rec-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  font-size: 18px;
-}
-
-.rec-title { font-weight: 800; }
-.rec-tag { color: var(--muted); }
-
-/* about box */
-.home-about {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.about-box {
-  max-width: 900px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 40px;
-  text-align: center;
-  backdrop-filter: blur(14px);
-}
-
-.about-box h3 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.about-box p {
-  font-size: 19px;
-  line-height: 1.7;
-  color: var(--muted);
-}
 :root {
   --text: #e6e8ff;
   --muted: #cdd2ff;
@@ -264,147 +178,6 @@ body {
 .hero-fantasy { background: linear-gradient(135deg, #1f4c5c, #3b5bdb); }
 .hero-romance { background: linear-gradient(135deg, #7b2cbf, #ff4d6d); }
 
-/* ===== TABLE WRAP (prevents broken layout) ===== */
-.table-box {
-  margin-top: 26px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: 0 22px 55px rgba(0,0,0,0.45);
-  backdrop-filter: blur(14px);
-  padding: 26px;
-}
-
-.table-box h3 {
-  margin: 0 0 16px;
-  font-size: 30px;
-  color: #ffffff;
-}
-
-/* This is the big fix: if screen is smaller, scroll horizontally instead of breaking */
-.table-wrap {
-  overflow-x: auto;
-  padding-bottom: 6px;
-}
-
-/* ===== TABLE ===== */
-.anime-table {
-  width: 100%;
-  min-width: 1100px;            /* forces clean columns */
-  border-collapse: separate;
-  border-spacing: 0;
-  table-layout: auto;           /* IMPORTANT: stops the weird squeezing */
-}
-
-.anime-table th,
-.anime-table td {
-  padding: 18px 18px;
-  border-right: 1px solid rgba(255,255,255,0.10);
-  border-bottom: 1px solid rgba(255,255,255,0.10);
-  vertical-align: top;
-}
-
-.anime-table th:first-child,
-.anime-table td:first-child { border-left: 1px solid rgba(255,255,255,0.10); }
-
-.anime-table thead th {
-  position: sticky;
-  top: 0;
-  background: rgba(10, 12, 28, 0.95);
-  color: #ffffff;
-  font-size: 20px;
-  text-align: left;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  z-index: 2;
-}
-
-/* rounded corners */
-.anime-table thead th:first-child { border-top-left-radius: 14px; }
-.anime-table thead th:last-child  { border-top-right-radius: 14px; }
-.anime-table tbody tr:last-child td:first-child { border-bottom-left-radius: 14px; }
-.anime-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 14px; }
-
-/* Column sizing (stable and readable) */
-.anime-table th:nth-child(1), .anime-table td:nth-child(1) { width: 280px; }
-.anime-table th:nth-child(2), .anime-table td:nth-child(2) { width: 170px; }
-.anime-table th:nth-child(3), .anime-table td:nth-child(3) { width: 190px; }
-.anime-table th:nth-child(4), .anime-table td:nth-child(4) { width: 520px; }
-.anime-table th:nth-child(5), .anime-table td:nth-child(5) { width: 320px; }
-
-/* Text */
-.anime-table td {
-  font-size: 19px;
-  line-height: 1.65;
-  color: #e8ebff;
-}
-
-.anime-table a {
-  color: #93a0ff;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.anime-table a:hover { text-decoration: underline; color: #ffffff; }
-
-/* ===== Anime cell (image + name) FIX ===== */
-.anime-cell {
-  display: grid;
-  grid-template-columns: 110px 1fr; /* stable */
-  gap: 14px;
-  align-items: start;
-}
-
-.anime-cell span,
-.anime-cell {
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.anime-img {
-  width: 110px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.40);
-}
-
-.anime-img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 26px rgba(255,77,141,0.55);
-  transition: 0.25s;
-}
-
-/* Trailer embeds */
-.anime-table iframe {
-  width: 100%;
-  height: 190px;
-  border: 0;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  margin-top: 60px;
-  padding: 28px;
-  text-align: center;
-  font-weight: 800;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: linear-gradient(135deg, rgba(21,25,51,0.85), rgba(255,77,141,0.18));
-  color: #ffffff;
-  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
-}
-
-/* ===== MOBILE TWEAKS ===== */
-@media (max-width: 900px) {
-  .site-title { font-size: 54px; }
-  .site-nav a, .site-nav summary { font-size: 20px; gap: 18px; }
-  .hero { padding: 44px 24px; }
-  .hero h2 { font-size: 40px; }
-  .hero p { font-size: 18px; }
-}
 /* ===== HOME ABOUT SECTION ===== */
 .home-about {
   margin-top: 40px;
@@ -432,4 +205,218 @@ body {
   font-size: 20px;
   line-height: 1.7;
   color: var(--muted);
+}
+
+/* ===== HOME GRID SECTIONS ===== */
+.content-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 26px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+  border: 1px solid var(--border);
+}
+
+.chip:hover {
+  background: rgba(108,99,255,0.35);
+}
+
+.rec-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+
+.rec-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 18px;
+}
+
+.rec-title { font-weight: 800; }
+.rec-tag { color: var(--muted); }
+
+.rec-title a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.rec-title a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ===== TABLE WRAP (prevents broken layout) ===== */
+.table-box {
+  margin-top: 26px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 22px 55px rgba(0,0,0,0.45);
+  backdrop-filter: blur(14px);
+  padding: 26px;
+}
+
+.table-box h3 {
+  margin: 0 0 16px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+/* ===== TABLE ===== */
+.anime-table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+}
+
+.anime-table th,
+.anime-table td {
+  padding: 18px 18px;
+  border-right: 1px solid rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  vertical-align: top;
+}
+
+.anime-table th:first-child,
+.anime-table td:first-child { border-left: 1px solid rgba(255,255,255,0.10); }
+
+.anime-table thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 12, 28, 0.95);
+  color: #ffffff;
+  font-size: 20px;
+  text-align: left;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  z-index: 2;
+}
+
+.anime-table thead th:first-child { border-top-left-radius: 14px; }
+.anime-table thead th:last-child  { border-top-right-radius: 14px; }
+.anime-table tbody tr:last-child td:first-child { border-bottom-left-radius: 14px; }
+.anime-table tbody tr:last-child td:last-child  { border-bottom-right-radius: 14px; }
+
+.anime-table th:nth-child(1), .anime-table td:nth-child(1) { width: 280px; }
+.anime-table th:nth-child(2), .anime-table td:nth-child(2) { width: 170px; }
+.anime-table th:nth-child(3), .anime-table td:nth-child(3) { width: 190px; }
+.anime-table th:nth-child(4), .anime-table td:nth-child(4) { width: 520px; }
+.anime-table th:nth-child(5), .anime-table td:nth-child(5) { width: 320px; }
+
+.anime-table td {
+  font-size: 19px;
+  line-height: 1.65;
+  color: #e8ebff;
+}
+
+.anime-table a {
+  color: #93a0ff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.anime-table a:hover { text-decoration: underline; color: #ffffff; }
+
+/* ===== Anime cell (image + name) FIX ===== */
+.anime-cell {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.anime-cell span,
+.anime-cell {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.anime-img {
+  width: 110px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.40);
+}
+
+.anime-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 26px rgba(255,77,141,0.55);
+  transition: 0.25s;
+}
+
+.anime-table iframe {
+  width: 100%;
+  height: 190px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  margin-top: 60px;
+  padding: 28px;
+  text-align: center;
+  font-weight: 800;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: linear-gradient(135deg, rgba(21,25,51,0.85), rgba(255,77,141,0.18));
+  color: #ffffff;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+}
+
+/* ===== MOBILE TWEAKS ===== */
+@media (max-width: 900px) {
+  .site-title { font-size: 54px; }
+  .site-nav { right: 16px; gap: 18px; }
+  .site-nav a, .site-nav summary { font-size: 20px; }
+  .hero { padding: 44px 24px; }
+  .hero h2 { font-size: 40px; }
+  .hero p { font-size: 18px; }
+  .content-grid { grid-template-columns: 1fr; }
 }
