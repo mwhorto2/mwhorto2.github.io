@@ -216,13 +216,15 @@ body {
 }
 
 /* ===== TABLE SECTION ===== */
-.table-box {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 20px;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
-  margin-top: 30px;
+.table-box,
+.feature {
+  background: rgba(21, 25, 51, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  border-radius: 18px;
 }
+
 
 .anime-table {
   width: 100%;
