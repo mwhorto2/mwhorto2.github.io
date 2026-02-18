@@ -420,3 +420,43 @@ body {
   .hero p { font-size: 18px; }
   .content-grid { grid-template-columns: 1fr; }
 }
+/* ===== ROTATING IMAGE SLIDER ===== */
+.slider {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slideShow 16s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* animation */
+@keyframes slideShow {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+
+  100% { transform: translateX(0); }
+}
