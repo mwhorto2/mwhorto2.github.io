@@ -16,13 +16,11 @@
     </header>
 
     <!-- Navigation -->
-  <nav class="site-nav">
+<nav class="site-nav">
   <a href="index.html">Home</a>
-  <a href="contact.html">Contact</a>
 
-  <details class="menu" id="genreMenu">
-    <summary class="menu-btn">Genres ▾</summary>
-
+  <details class="menu">
+    <summary>Genres ▾</summary>
     <div class="menu-panel">
       <a href="romance.html">Romance</a>
       <a href="fantasy.html">Fantasy</a>
@@ -30,14 +28,19 @@
       <a href="SOL.html">Slice of Life</a>
     </div>
   </details>
+
+  <a href="contact.html">Contact</a>
 </nav>
 
 <script>
-  const menu = document.getElementById("genreMenu");
-  document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target)) menu.removeAttribute("open");
-  });
+document.addEventListener("click", function(e){
+  const menu = document.querySelector(".menu");
+  if(menu && !menu.contains(e.target)){
+    menu.removeAttribute("open");
+  }
+});
 </script>
+
 
 
 
