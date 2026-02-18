@@ -1,208 +1,87 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anime Atlas | Fantasy</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+/* NAV BAR */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  align-items: center;
+  position: relative;
+}
 
-<body>
-  <div id="wrapper">
+.site-nav a {
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: 2px solid var(--secondary);
+  text-decoration: none;
+  background: #fff;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
 
-    <header class="site-header">
-      <h1 class="site-title">Anime Atlas</h1>
-    </header>
+.site-nav a:hover {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  transform: translateY(-2px);
+}
 
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
 
-      <div class="dropdown">
-        <button class="dropbtn">Genres ▾</button>
-        <div class="dropdown-content">
-          <a href="romance.html">Romance</a>
-          <a href="fantasy.html">Fantasy</a>
-          <a href="action.html">Action</a>
-          <a href="SOL.html">Slice of Life</a>
-        </div>
-      </div>
+.dropbtn {
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: 2px solid var(--secondary);
+  background: #fff;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
 
-      <a href="contact.html">Contact</a>
-    </nav>
+.dropbtn:hover {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+}
 
-    <main>
-      <section class="hero hero-fantasy">
-        <div class="hero-content">
-          <h2>Step into Fantasy Worlds</h2>
-          <p>Magic, monsters, and adventures—picked to help you find your next binge.</p>
-          <a class="btn" href="#lineup">See the lineup</a>
-        </div>
-      </section>
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  min-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 1000;
+}
 
-      <section class="feature">
-        <h2>Fantasy Anime</h2>
-        <p>
-          Fantasy anime transports viewers into imaginative worlds filled with magic,
-          mythical creatures, powerful kingdoms, and unforgettable adventures. These stories
-          follow determined heroes, unlikely friendships, and epic journeys that test courage
-          and identity—perfect for anyone who wants to escape into something bigger than real life.
-        </p>
-      </section>
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
 
-      <section class="cards">
-        <article class="card">
-          <h3>Best for Beginners</h3>
-          <p>Easy to get into, fast hook, and super bingeable.</p>
-        </article>
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
 
-        <article class="card">
-          <h3>Strong Worldbuilding</h3>
-          <p>Magic systems, lore, and settings that feel alive.</p>
-        </article>
+.dropdown-content a:hover {
+  background: #f3f5ff;
+}
 
-        <article class="card">
-          <h3>Comfort Watch</h3>
-          <p>Cozy vibes, funny moments, and low-stress enjoyment.</p>
-        </article>
-      </section>
-
-      <section class="anime-table-section" id="lineup">
-        <div class="table-box">
-          <h3>Fantasy Lineup</h3>
-
-          <table class="anime-table">
-            <thead>
-              <tr>
-                <th>Anime</th>
-                <th>Genres</th>
-                <th>Where to Watch</th>
-                <th>About the Story</th>
-                <th>Trailer</th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td class="anime-cell">
-                  <img src="blackclover.jpg" alt="Black Clover" class="anime-img">
-                  Black Clover
-                </td>
-                <td>
-                  <a href="action.html">Action</a>,
-                  <a href="fantasy.html">Fantasy</a>
-                </td>
-                <td>
-                  <a href="https://www.crunchyroll.com/series/GRE50KV36/black-clover" target="_blank">Crunchyroll</a><br>
-                  <a href="https://www.hulu.com/series/black-clover-f6451467-97a8-4ddf-9ae8-e9e4cbb53fc8" target="_blank">Hulu</a>
-                </td>
-                <td class="desc">
-                  Asta is born without magic in a world where magic defines status and power.
-                  Determined to become the Wizard King, he trains relentlessly alongside his
-                  gifted rival Yuno. After joining the Magic Knights, Asta proves that grit can
-                  compete with destiny as he faces powerful enemies, rival kingdoms, and dark
-                  forces threatening the Clover Kingdom.
-                  <br><br>
-                  <strong>Main characters:</strong> Asta, Yuno, Noelle Silva
-                  <br><br>
-                  <em>If you like:</em> Harry Potter or The Witcher, you’ll love this underdog magic adventure.
-                </td>
-                <td>
-                  <iframe src="https://www.youtube.com/embed/Wipd9hjjyp8" title="Black Clover Trailer" allowfullscreen></iframe>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="anime-cell">
-                  <img src="bookworm.jpg" alt="Ascendance of a Bookworm" class="anime-img">
-                  Ascendance of a Bookworm
-                </td>
-                <td>
-                  <a href="fantasy.html">Fantasy</a>,
-                  <a href="SOL.html">Slice of Life</a>
-                </td>
-                <td>
-                  <a href="https://www.crunchyroll.com/series/G6793XKZY/ascendance-of-a-bookworm" target="_blank">Crunchyroll</a>
-                </td>
-                <td class="desc">
-                  A book-loving college student is reborn in a medieval fantasy world where books are
-                  rare and only the wealthy can access them. Now living as Myne, she is physically weak
-                  but mentally determined. Using modern knowledge, she tries to create books from scratch
-                  while learning about magic, social class, and survival in a world that doesn’t make
-                  curiosity easy.
-                  <br><br>
-                  <strong>Main characters:</strong> Myne, Lutz, Ferdinand
-                  <br><br>
-                  <em>If you like:</em> Bridgerton or Little Women, you’ll enjoy this cozy, smart fantasy world.
-                </td>
-                <td>
-                  <iframe src="https://www.youtube.com/embed/Wo28IopG2WE" title="Bookworm Trailer" allowfullscreen></iframe>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="anime-cell">
-                  <img src="noragami.jpg" alt="Noragami" class="anime-img">
-                  Noragami
-                </td>
-                <td>
-                  <a href="action.html">Action</a>,
-                  <a href="fantasy.html">Fantasy</a>
-                </td>
-                <td>
-                  <a href="https://www.crunchyroll.com/series/G6WEV3WM6/noragami" target="_blank">Crunchyroll</a>
-                </td>
-                <td class="desc">
-                  Yato is a broke minor god who dreams of becoming famous. After an accident connects
-                  high schooler Hiyori to the spirit world, she gets pulled into Yato’s chaotic life.
-                  With his weapon partner Yukine, Yato takes odd jobs for five yen while battling
-                  spirits, rival gods, and the consequences of his hidden past.
-                  <br><br>
-                  <strong>Main characters:</strong> Yato, Hiyori Iki, Yukine
-                  <br><br>
-                  <em>If you like:</em> Supernatural or Lucifer, you’ll love this fast-paced urban fantasy.
-                </td>
-                <td>
-                  <iframe src="https://www.youtube.com/embed/sbTHV79TD8Q" title="Noragami Trailer" allowfullscreen></iframe>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="anime-cell">
-                  <img src="dungeon.jpg" alt="Delicious in Dungeon" class="anime-img">
-                  Delicious in Dungeon
-                </td>
-                <td>
-                  <a href="fantasy.html">Fantasy</a>, Comedy
-                </td>
-                <td>
-                  <a href="https://www.netflix.com/title/81564899" target="_blank">Netflix</a>
-                </td>
-                <td class="desc">
-                  After a dungeon raid goes wrong, Laios and his party have no time and no money to spare.
-                  To rescue their friend, they push deeper into the dungeon—surviving by cooking and eating
-                  the monsters they defeat. With Senshi leading the “monster cuisine,” the show mixes classic
-                  fantasy adventure, comedy, and surprisingly thoughtful world-building.
-                  <br><br>
-                  <strong>Main characters:</strong> Laios, Marcille, Senshi
-                  <br><br>
-                  <em>If you like:</em> Dungeons & Dragons or The Great British Bake Off, you’ll enjoy this quirky adventure.
-                </td>
-                <td>
-                  <iframe src="https://www.youtube.com/embed/n5JEoD7keVo" title="Delicious in Dungeon Trailer" allowfullscreen></iframe>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; 2026 Anime Atlas</p>
-    </footer>
-
-  </div>
-</body>
-</html>
+.dropdown:hover .dropdown-content {
+  display: block;
+}
