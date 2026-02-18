@@ -475,4 +475,8 @@ body {
   animation-play-state: paused;
   cursor: pointer;
 }
+.slider {
+  position: relative;
+  z-index: 2;
+}
 
