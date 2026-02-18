@@ -311,3 +311,56 @@ iframe {
   color: white;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
+/* ===== GLOBAL TEXT FIX ===== */
+body {
+  color: #f1f3ff;
+}
+
+/* main headings */
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+/* paragraph text */
+p {
+  color: #d6dbff;
+}
+
+/* nav links top right */
+.site-nav a,
+.site-nav summary {
+  color: #ffffff;
+}
+
+/* hover glow */
+.site-nav a:hover,
+.site-nav summary:hover {
+  color: #ff77aa;
+}
+
+/* table text */
+.anime-table td {
+  color: #e6e9ff;
+}
+
+/* table headers */
+.anime-table th {
+  color: #ffffff;
+  background: rgba(255,255,255,0.08);
+}
+
+/* description cells */
+.desc {
+  color: #dfe3ff;
+}
+
+/* feature box text */
+.feature {
+  color: #e6e9ff;
+}
+
+/* footer */
+.site-footer {
+  color: white;
+}
+
