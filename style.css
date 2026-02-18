@@ -163,22 +163,25 @@ body {
   color: #fff;
   box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
+.anime-table-section {
+  margin-top: 40px;
+}
+
 .anime-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
+  margin-top: 10px;
 }
 
 .anime-table th,
 .anime-table td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
+  border: 1px solid #444;
+  padding: 12px;
   text-align: left;
-  vertical-align: top;
 }
 
 .anime-table th {
-  font-weight: bold;
+  background-color: #eee;
 }
 
 .anime-table a {
@@ -189,4 +192,3 @@ body {
 .anime-table a:hover {
   text-decoration: underline;
 }
-
