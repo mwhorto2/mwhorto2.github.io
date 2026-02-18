@@ -13,51 +13,49 @@
     <header class="site-header">
       <h1 class="site-title">Anime Atlas</h1>
     </header>
-<nav class="site-nav">
-  <a href="index.html">Home</a>
 
-  <details class="menu">
-    <summary>Genres ▾</summary>
-    <div class="menu-panel">
-      <a href="romance.html">Romance</a>
-      <a href="fantasy.html">Fantasy</a>
-      <a href="action.html">Action</a>
-      <a href="SOL.html">Slice of Life</a>
-    </div>
-  </details>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
 
-  <a href="contact.html">Contact</a>
-</nav>
+      <details class="menu">
+        <summary>Genres ▾</summary>
+        <div class="menu-panel">
+          <a href="romance.html">Romance</a>
+          <a href="fantasy.html">Fantasy</a>
+          <a href="action.html">Action</a>
+          <a href="SOL.html">Slice of Life</a>
+        </div>
+      </details>
 
-<script>
-document.addEventListener("click", function(e){
-  const menu = document.querySelector(".menu");
-  if(menu && !menu.contains(e.target)){
-    menu.removeAttribute("open");
-  }
-});
-</script>
+      <a href="contact.html">Contact</a>
+    </nav>
 
+    <script>
+      document.addEventListener("click", function(e){
+        const menu = document.querySelector(".menu");
+        if(menu && !menu.contains(e.target)){
+          menu.removeAttribute("open");
+        }
+      });
+    </script>
 
     <main>
-   <section class="hero hero-romance">
-  <div class="hero-inner">
-    <h2>Romance Anime</h2>
-    <p>
-      Slow burns, messy feelings, and characters who actually grow.
-      Whether it’s sweet, dramatic, or chaotic, romance hits hardest when it’s real.
-    </p>
-    <a class="hero-btn" href="#lineup">Jump to the lineup</a>
-  </div>
-</section>
+      <section class="hero hero-romance">
+        <div class="hero-inner">
+          <h2>Romance Anime</h2>
+          <p>
+            Slow burns, messy feelings, and characters who actually grow.
+            Whether it’s sweet, dramatic, or chaotic, romance hits hardest when it’s real.
+          </p>
+          <a class="hero-btn" href="#lineup">Jump to the lineup</a>
+        </div>
+      </section>
 
-      <section class="anime-table-section">
+      <section class="anime-table-section" id="lineup">
         <div class="table-box">
           <h3>Romance Lineup</h3>
 
           <table class="anime-table">
-            <section class="anime-table-section" id="lineup">
-
             <thead>
               <tr>
                 <th>Anime</th>
@@ -69,8 +67,6 @@ document.addEventListener("click", function(e){
             </thead>
 
             <tbody>
-
-              <!-- Fruits Basket -->
               <tr>
                 <td class="anime-cell">
                   <img src="fruitsbasket.jpg" alt="Fruits Basket" class="anime-img">
@@ -89,10 +85,8 @@ document.addEventListener("click", function(e){
                   Sohma family carries a mysterious zodiac curse. As she grows closer to
                   Kyo and Yuki Sohma, she uncovers emotional trauma, family pressure, and
                   hidden love. Through empathy and warmth, Tohru helps everyone begin to heal.
-
                   <br><br>
                   <strong>Main characters:</strong> Tohru Honda, Kyo Sohma, Yuki Sohma
-
                   <br><br>
                   <em>If you like:</em> The Summer I Turned Pretty or To All the Boys I've Loved Before,
                   you’ll love this emotional slow-burn romance.
@@ -106,7 +100,6 @@ document.addEventListener("click", function(e){
                 </td>
               </tr>
 
-              <!-- Toradora -->
               <tr>
                 <td class="anime-cell">
                   <img src="toradora.jpg" alt="Toradora" class="anime-img">
@@ -125,10 +118,8 @@ document.addEventListener("click", function(e){
                   When they team up to help each other confess to their crushes, their unlikely
                   friendship slowly grows into something deeper. The show beautifully captures
                   teenage vulnerability and emotional growth.
-
                   <br><br>
                   <strong>Main characters:</strong> Taiga Aisaka, Ryuuji Takasu, Minori Kushieda
-
                   <br><br>
                   <em>If you like:</em> Never Have I Ever or 10 Things I Hate About You,
                   you’ll enjoy this chaotic but heartfelt romance.
@@ -142,7 +133,6 @@ document.addEventListener("click", function(e){
                 </td>
               </tr>
 
-              <!-- Romantic Killer -->
               <tr>
                 <td class="anime-cell">
                   <img src="romantickiller.jpg" alt="Romantic Killer" class="anime-img">
@@ -158,10 +148,8 @@ document.addEventListener("click", function(e){
                   Anzu Hoshino prefers video games and snacks over romance, but a magical being
                   suddenly forces her into classic rom-com scenarios. As she resists destiny,
                   she builds unexpected friendships and slowly discovers what real connection means.
-
                   <br><br>
                   <strong>Main characters:</strong> Anzu Hoshino, Tsukasa Kazuki, Junta Hayami
-
                   <br><br>
                   <em>If you like:</em> Scott Pilgrim or She's the Man,
                   you’ll love this comedy-heavy anti-romance.
