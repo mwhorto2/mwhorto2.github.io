@@ -9,63 +9,37 @@
 
 <body>
   <div id="wrapper">
-    <header class="site-header">
-      <div class="brand">
-        <p class="logo-text">Anime Atlas Logo</p>
-        <h1>ANIME ATLAS</h1>
-        <div class="accent-line"></div>
-      </div>
 
-      <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="genres.html">Genres</a>
-            <ul class="dropdown-menu">
-              <li><a href="romance.html">Romance</a></li>
-              <li><a href="fantasy.html">Fantasy</a></li>
-              <li><a href="action.html">Action</a></li>
-              <li><a href="isekai.html">Isekai</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+
+      <details class="menu">
+        <summary>Genres</summary>
+        <div class="menu-panel">
+          <a href="romance.html">Romance</a>
+          <a href="fantasy.html">Fantasy</a>
+          <a href="action.html">Action</a>
+          <a href="isekai.html">Isekai</a>
+        </div>
+      </details>
+
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <header class="site-header">
+      <h1 class="site-title">ANIME ATLAS</h1>
     </header>
 
     <main>
       <section class="hero hero-fantasy">
-  <div class="hero-inner">
-    <h2>Welcome to Anime Atlas</h2>
-    <p>
-      New fan or anime veteran, either way Anime Atlas is here to help you find shows that are not just shonen.
-      Pick a genre, check recommendations, and discover something that actually fits your vibe and mood.
-      This site highlights a mix of popular series and hidden gems so everyone can find something worth watching.
-    </p>
-
-    <a class="hero-btn" href="genres.html">Browse Genres</a>
-  </div>
-</section>
-
-      <section class="hero">
-        <div class="hero-text">
-          <p class="kicker">Site Banner Image</p>
-          <h2>Find your next favorite anime</h2>
+        <div class="hero-inner">
+          <h2>Welcome to Anime Atlas</h2>
           <p>
-            Explore genres like action, fantasy, romance, and isekai. Browse recommendations and
-            jump straight into what matches your mood.
+            New fan or anime veteran, either way Anime Atlas is here to help you find shows that are not just shonen.
+            Pick a genre, check recommendations, and discover something that actually fits your vibe and mood.
+            This site highlights a mix of popular series and hidden gems so everyone can find something worth watching.
           </p>
-
-          <div class="hero-buttons">
-            <a class="btn primary" href="genres.html">Browse Genres</a>
-            <a class="btn ghost" href="sololevel.html">Featured Pick</a>
-          </div>
-        </div>
-
-        <div class="hero-card" aria-label="Featured anime">
-          <h3>Featured</h3>
-          <p class="small">Solo Leveling</p>
-          <a class="card-link" href="sololevel.html">Open feature →</a>
+          <a class="hero-btn" href="genres.html">Browse Genres</a>
         </div>
       </section>
 
@@ -73,7 +47,7 @@
         <section class="panel">
           <h2>Featured Genres</h2>
           <p class="muted">
-            Pick a lane and explore. Each genre page has a quick description + starter recs.
+            Pick a lane and explore. Each genre page has a quick description and starter recommendations.
           </p>
 
           <div class="chips">
@@ -86,25 +60,13 @@
 
         <section class="panel">
           <h2>Popular Recommendations</h2>
-          <p class="muted">Quick picks people usually love (swap these with your own).</p>
+          <p class="muted">Quick picks people usually love. Swap these with your own.</p>
 
           <ul class="rec-list">
-            <li>
-              <span class="rec-title">Attack on Titan</span>
-              <span class="rec-tag">Action</span>
-            </li>
-            <li>
-              <span class="rec-title">Frieren</span>
-              <span class="rec-tag">Fantasy</span>
-            </li>
-            <li>
-              <span class="rec-title">Kaguya-sama</span>
-              <span class="rec-tag">Romance</span>
-            </li>
-            <li>
-              <span class="rec-title">Re:Zero</span>
-              <span class="rec-tag">Isekai</span>
-            </li>
+            <li><span class="rec-title">Attack on Titan</span><span class="rec-tag">Action</span></li>
+            <li><span class="rec-title">Frieren</span><span class="rec-tag">Fantasy</span></li>
+            <li><span class="rec-title">Kaguya-sama</span><span class="rec-tag">Romance</span></li>
+            <li><span class="rec-title">Re:Zero</span><span class="rec-tag">Isekai</span></li>
           </ul>
         </section>
       </section>
@@ -113,6 +75,7 @@
     <footer class="site-footer">
       <p>© 2026 Anime Atlas</p>
     </footer>
+
   </div>
 </body>
 </html>
