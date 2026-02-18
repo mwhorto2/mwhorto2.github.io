@@ -462,3 +462,35 @@ main {
     font-size: 15px;
   }
 }
+/* ===== SAFETY FIXES (PASTE AT VERY BOTTOM) ===== */
+
+/* keep the slider panel from collapsing or looking like plain page */
+.slider-panel {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* force dots to always be centered and in a row */
+.carousel-dots {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* if a browser is treating labels weird, this prevents stacking */
+.carousel-dots .dot {
+  display: inline-block !important;
+}
+
+/* make sure carousel stays centered */
+.carousel {
+  width: 100%;
+}
+
+/* prevents giant images from “pushing” layout weirdly */
+.carousel-slide img {
+  max-height: 100%;
+}
