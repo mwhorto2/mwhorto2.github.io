@@ -15,20 +15,27 @@
     </header>
 
     <nav class="site-nav">
-      <a href="index.html">Home</a>
+  <a href="index.html">Home</a>
+  <a href="contact.html">Contact</a>
 
-      <div class="dropdown">
-        <button class="dropbtn" type="button">Genres ▾</button>
-        <div class="dropdown-content">
-          <a href="romance.html">Romance</a>
-          <a href="fantasy.html">Fantasy</a>
-          <a href="action.html">Action</a>
-          <a href="SOL.html">Slice of Life</a>
-        </div>
-      </div>
+  <details class="menu" id="genreMenu">
+    <summary class="menu-btn">Genres ▾</summary>
 
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="menu-panel">
+      <a href="romance.html">Romance</a>
+      <a href="fantasy.html">Fantasy</a>
+      <a href="action.html">Action</a>
+      <a href="SOL.html">Slice of Life</a>
+    </div>
+  </details>
+</nav>
+
+<script>
+  const menu = document.getElementById("genreMenu");
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target)) menu.removeAttribute("open");
+  });
+</script>
 
     <main>
       <section class="page-intro">
