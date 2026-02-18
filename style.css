@@ -449,6 +449,11 @@ body {
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
+.slides img {
+  image-rendering: auto;
+  image-rendering: high-quality;
+}
+
 
 /* ===== FOOTER ===== */
 .site-footer {
