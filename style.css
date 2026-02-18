@@ -9,6 +9,115 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #b7b6e6, #9fa0cf);
+  color: var(--text);
+}
+
+/* ===== WRAPPER ===== */
+#wrapper {
+  width: 95%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.site-title {
+  font-size: 56px;
+  margin: 0;
+  color: var(--secondary);
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+/* ===== NAV TOP RIGHT ===== */
+.site-nav {
+  position: fixed;
+  top: 22px;
+  right: 36px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  z-index: 9999;
+}
+
+.site-nav a,
+.site-nav summary {
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 28px;
+  color: var(--secondary);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav summary:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* remove default details marker */
+.menu summary {
+  list-style: none;
+}
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu {
+  position: relative;
+}
+
+/* dropdown panel */
+.menu-panel {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  overflow: hidden;
+  display: none;
+}
+
+.menu[open] .menu-panel {
+  display: block;
+}
+
+.menu-panel a {
+  display: block;
+  padding: 16px 18px;
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 650;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-panel a:last-child {
+  border-bottom: none;
+}
+
+.menu-panel a:hover {
+  background: #f3f5ff;
+  color: var(--accent);
+}
+
+/* ===== HERO (USED ON ROMANCE + FANTASY) ===== */
 .hero {
   margin: 24px auto 40px;
   border-radius: 22px;
@@ -60,6 +169,7 @@
 .hero-btn:hover {
   transform: translateY(-2px);
 }
+
 .hero-fantasy {
   background: linear-gradient(135deg, #1f4c5c, #3b5bdb);
 }
@@ -68,138 +178,7 @@
   background: linear-gradient(135deg, #7b2cbf, #ff4d6d);
 }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg, #b7b6e6, #9fa0cf);
-  color: var(--text);
-}
-
-/* ===== WRAPPER ===== */
-#wrapper {
-  width: 95%;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* ===== HEADER ===== */
-.site-header {
-  text-align: center;
-  margin-top: 90px;
-  margin-bottom: 30px;
-}
-
-.site-title {
-  font-size: 56px;
-  margin: 0;
-  color: var(--secondary);
-  letter-spacing: 1px;
-  font-weight: 800;
-}
-
-/* ===== NAV TOP RIGHT ===== */
-.site-nav {
-  position: fixed;
-  top: 25px;
-  right: 40px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  z-index: 9999;
-}
-
-.site-nav a,
-.site-nav summary {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 28px;
-  color: var(--secondary);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-.site-nav a:hover,
-.site-nav summary:hover {
-  color: var(--accent);
-  transform: translateY(-2px);
-}
-
-/* remove triangle */
-.menu summary {
-  list-style: none;
-}
-.menu summary::-webkit-details-marker {
-  display: none;
-}
-
-/* dropdown */
-.menu {
-  position: relative;
-}
-
-.menu-panel {
-  position: absolute;
-  top: 45px;
-  right: 0;
-  width: 220px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
-  overflow: hidden;
-  display: none;
-}
-
-.menu[open] .menu-panel {
-  display: block;
-}
-
-.menu-panel a {
-  display: block;
-  padding: 16px 18px;
-  font-size: 18px;
-  color: var(--text);
-  font-weight: 600;
-  border-bottom: 1px solid #eee;
-}
-
-.menu-panel a:last-child {
-  border-bottom: none;
-}
-
-.menu-panel a:hover {
-  background: #f3f5ff;
-  color: var(--accent);
-}
-
-/* ===== HERO ===== */
-.hero {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  padding: 60px;
-  border-radius: 18px;
-  color: white;
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-              url(heroanime.jpg);
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,.3);
-}
-
-.hero h2 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 20px;
-  opacity: .95;
-}
-
-/* ===== FEATURE BOX ===== */
+/* ===== FEATURE BOX (OPTIONAL) ===== */
 .feature {
   border: 2px solid var(--secondary);
   padding: 40px;
@@ -223,7 +202,7 @@ body {
   padding: 35px;
   border-radius: 20px;
   box-shadow: 0 14px 30px rgba(0,0,0,0.25);
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .anime-table {
@@ -270,8 +249,9 @@ body {
 .anime-cell {
   display: flex;
   gap: 18px;
-  font-weight: 700;
+  font-weight: 750;
   font-size: 22px;
+  align-items: flex-start;
 }
 
 .anime-img {
@@ -282,7 +262,7 @@ body {
 
 .anime-table a {
   color: #2d46ff;
-  font-weight: 700;
+  font-weight: 750;
   text-decoration: none;
 }
 
@@ -295,6 +275,7 @@ iframe {
   border-radius: 12px;
   width: 100%;
   height: 200px;
+  border: 0;
 }
 
 /* ===== FOOTER ===== */
