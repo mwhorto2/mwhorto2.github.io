@@ -13,53 +13,51 @@
     <header class="site-header">
       <h1 class="site-title">Anime Atlas</h1>
     </header>
-<nav class="site-nav">
-  <a href="index.html">Home</a>
 
-  <details class="menu">
-    <summary>Genres ▾</summary>
-    <div class="menu-panel">
-      <a href="romance.html">Romance</a>
-      <a href="fantasy.html">Fantasy</a>
-      <a href="action.html">Action</a>
-      <a href="SOL.html">Slice of Life</a>
-    </div>
-  </details>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
 
-  <a href="contact.html">Contact</a>
-</nav>
+      <details class="menu">
+        <summary>Genres ▾</summary>
+        <div class="menu-panel">
+          <a href="romance.html">Romance</a>
+          <a href="fantasy.html">Fantasy</a>
+          <a href="action.html">Action</a>
+          <a href="SOL.html">Slice of Life</a>
+        </div>
+      </details>
 
-<script>
-document.addEventListener("click", function(e){
-  const menu = document.querySelector(".menu");
-  if(menu && !menu.contains(e.target)){
-    menu.removeAttribute("open");
-  }
-});
-</script>
+      <a href="contact.html">Contact</a>
+    </nav>
 
+    <script>
+      document.addEventListener("click", function(e){
+        const menu = document.querySelector(".menu");
+        if(menu && !menu.contains(e.target)){
+          menu.removeAttribute("open");
+        }
+      });
+    </script>
 
     <main>
       <section class="hero hero-fantasy">
-  <div class="hero-inner">
-    <h2>Fantasy Anime</h2>
-    <p>
-           Fantasy anime transports viewers into imaginative worlds filled with magic,
-          mythical creatures, powerful kingdoms, and unforgettable adventures.
-          These stories follow determined heroes, unlikely friendships, and epic journeys
-          that test courage and identity.
-    </p>
-    <a class="hero-btn" href="#lineup">Jump to the lineup</a>
-  </div>
-</section>
+        <div class="hero-inner">
+          <h2>Fantasy Anime</h2>
+          <p>
+            Fantasy anime transports viewers into imaginative worlds filled with magic,
+            mythical creatures, powerful kingdoms, and unforgettable adventures.
+            These stories follow determined heroes, unlikely friendships, and epic journeys
+            that test courage and identity.
+          </p>
+          <a class="hero-btn" href="#lineup">Jump to the lineup</a>
+        </div>
+      </section>
 
       <section class="anime-table-section" id="lineup">
-        <h3 class="section-title">Fantasy Anime Lineup</h3>
+        <div class="table-box">
+          <h3>Fantasy Lineup</h3>
 
-        <div class="table-wrap">
-           <section class="anime-table-section" id="lineup">
           <table class="anime-table">
-           
             <thead>
               <tr>
                 <th>Anime</th>
@@ -71,11 +69,10 @@ document.addEventListener("click", function(e){
             </thead>
 
             <tbody>
-
               <tr>
                 <td class="anime-cell">
                   <img src="blackclover.jpg" alt="Black Clover" class="anime-img">
-                  <span>Black Clover</span>
+                  Black Clover
                 </td>
                 <td>
                   <a href="action.html">Action</a>, <a href="fantasy.html">Fantasy</a>
@@ -84,7 +81,7 @@ document.addEventListener("click", function(e){
                   <a href="https://www.crunchyroll.com/series/GRE50KV36/black-clover" target="_blank" rel="noopener">Crunchyroll</a><br>
                   <a href="https://www.hulu.com/series/black-clover-f6451467-97a8-4ddf-9ae8-e9e4cbb53fc8" target="_blank" rel="noopener">Hulu</a>
                 </td>
-                <td class="desc">
+                <td>
                   Asta is born without magic in a world where magic determines power and status.
                   Refusing to give up, he trains relentlessly to become the Wizard King.
                   Alongside his gifted rival Yuno and the Magic Knights, Asta faces rival kingdoms,
@@ -107,7 +104,7 @@ document.addEventListener("click", function(e){
               <tr>
                 <td class="anime-cell">
                   <img src="bookworm.jpg" alt="Ascendance of a Bookworm" class="anime-img">
-                  <span>Ascendance of a Bookworm</span>
+                  Ascendance of a Bookworm
                 </td>
                 <td>
                   <a href="fantasy.html">Fantasy</a>, <a href="SOL.html">Slice of Life</a>
@@ -115,7 +112,7 @@ document.addEventListener("click", function(e){
                 <td>
                   <a href="https://www.crunchyroll.com/series/G6793XKZY/ascendance-of-a-bookworm" target="_blank" rel="noopener">Crunchyroll</a>
                 </td>
-                <td class="desc">
+                <td>
                   A book-loving college student is reborn into a medieval world where books are rare
                   and reserved for the elite. Now living as Myne, she’s physically weak but mentally determined.
                   Using modern knowledge, she tries to create books from scratch while navigating class systems,
@@ -123,7 +120,7 @@ document.addEventListener("click", function(e){
                   <br><br>
                   <strong>Main characters:</strong> Myne, Lutz, Ferdinand
                   <br><br>
-                  <em>If you like:</em> Bridgerton or Little Women, you’ll enjoy this cozy, thoughtful fantasy.
+                  <em>If you like:</em> Little Women or Bridgerton, you’ll enjoy this cozy, thoughtful fantasy.
                 </td>
                 <td>
                   <iframe
@@ -138,7 +135,7 @@ document.addEventListener("click", function(e){
               <tr>
                 <td class="anime-cell">
                   <img src="noragami.jpg" alt="Noragami" class="anime-img">
-                  <span>Noragami</span>
+                  Noragami
                 </td>
                 <td>
                   <a href="action.html">Action</a>, <a href="fantasy.html">Fantasy</a>
@@ -146,7 +143,7 @@ document.addEventListener("click", function(e){
                 <td>
                   <a href="https://www.crunchyroll.com/series/G6WEV3WM6/noragami" target="_blank" rel="noopener">Crunchyroll</a>
                 </td>
-                <td class="desc">
+                <td>
                   Yato is a broke minor god who takes odd jobs for five yen, hoping to become famous.
                   After meeting Hiyori, a human girl tied to the spirit world, he gains a weapon partner, Yukine.
                   Together they fight spirits, rival gods, and the consequences of Yato’s hidden past.
@@ -168,7 +165,7 @@ document.addEventListener("click", function(e){
               <tr>
                 <td class="anime-cell">
                   <img src="dungeon.jpg" alt="Delicious in Dungeon" class="anime-img">
-                  <span>Delicious in Dungeon</span>
+                  Delicious in Dungeon
                 </td>
                 <td>
                   <a href="fantasy.html">Fantasy</a>, Comedy
@@ -176,7 +173,7 @@ document.addEventListener("click", function(e){
                 <td>
                   <a href="https://www.netflix.com/title/81564899" target="_blank" rel="noopener">Netflix</a>
                 </td>
-                <td class="desc">
+                <td>
                   After a raid goes wrong, Laios and his party have no money and no time to waste.
                   To rescue their friend, they dive deeper into the dungeon—surviving by cooking and eating monsters.
                   With Senshi guiding the “monster cuisine,” the series blends adventure, comedy, and clever worldbuilding.
