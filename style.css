@@ -503,3 +503,11 @@ main {
 /* positions */
 .carousel-arrows .left { left: 16px; }
 .carousel-arrows .right { right: 16px; }
+/* ===== ARROW PAIR DISPLAY FIX (PUT AT VERY BOTTOM) ===== */
+.a1, .a2, .a3, .a4 { display: none !important; }
+
+#s1:checked ~ .carousel-arrows .a1 { display: grid !important; }
+#s2:checked ~ .carousel-arrows .a2 { display: grid !important; }
+#s3:checked ~ .carousel-arrows .a3 { display: grid !important; }
+#s4:checked ~ .carousel-arrows .a4 { display: grid !important; }
+
