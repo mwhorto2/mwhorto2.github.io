@@ -219,3 +219,12 @@ body {
   background-color: #f9f9ff;
   transition: 0.3s;
 }
+.anime-table td a {
+  color: #1d12fd;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.anime-table td a:hover {
+  text-decoration: underline;
+}
