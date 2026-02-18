@@ -319,3 +319,31 @@ body {
   .hero h2 { font-size: 40px; }
   .hero p { font-size: 18px; }
 }
+/* ===== HOME ABOUT SECTION ===== */
+.home-about {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-box {
+  max-width: 900px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+}
+
+.about-box h3 {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.about-box p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--muted);
+}
