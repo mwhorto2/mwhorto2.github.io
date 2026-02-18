@@ -40,13 +40,13 @@ body {
 
 .site-title {
   font-size: 72px;
-  margin: 0;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #1f2a44;
-  font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  color: #ffffff;
+  text-shadow: 0 8px 30px rgba(108,99,255,0.6);
+}
+
 }
 .site-title::after {
   content: "";
