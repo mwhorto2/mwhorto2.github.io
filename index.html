@@ -57,14 +57,57 @@
 
       <section class="panel slider-panel">
         <h2>Featured Shows</h2>
-        <p class="muted">Click a show to open its page.</p>
+        <p class="muted">Use the arrows or dots to browse, then click a poster to open its genre page.</p>
 
-        <div class="slider">
-          <div class="slides">
-            <a href="action.html"><img src="sololeveling.jpg" alt="Solo Leveling"></a>
-            <a href="fantasy.html"><img src="bookworm.jpg" alt="Ascendance of a Bookworm"></a>
-            <a href="romance.html"><img src="romantickiller.jpg" alt="Romantic Killer"></a>
-            <a href="SOL.html"><img src="asilentvoice.jpg" alt="A Silent Voice"></a>
+        <div class="carousel" aria-label="Featured shows carousel">
+          <input type="radio" name="slides" id="s1" checked>
+          <input type="radio" name="slides" id="s2">
+          <input type="radio" name="slides" id="s3">
+          <input type="radio" name="slides" id="s4">
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <a class="carousel-slide" href="action.html">
+                <img src="sololeveling.jpg" alt="Solo Leveling">
+                <span class="slide-caption">Solo Leveling • Action</span>
+              </a>
+
+              <a class="carousel-slide" href="fantasy.html">
+                <img src="bookworm.jpg" alt="Ascendance of a Bookworm">
+                <span class="slide-caption">Ascendance of a Bookworm • Fantasy</span>
+              </a>
+
+              <a class="carousel-slide" href="romance.html">
+                <img src="romantickiller.jpg" alt="Romantic Killer">
+                <span class="slide-caption">Romantic Killer • Romance</span>
+              </a>
+
+              <a class="carousel-slide" href="SOL.html">
+                <img src="asilentvoice.jpg" alt="A Silent Voice">
+                <span class="slide-caption">A Silent Voice • Slice of Life</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="carousel-arrows" aria-hidden="true">
+            <label class="arrow left a1" for="s4">‹</label>
+            <label class="arrow right a1" for="s2">›</label>
+
+            <label class="arrow left a2" for="s1">‹</label>
+            <label class="arrow right a2" for="s3">›</label>
+
+            <label class="arrow left a3" for="s2">‹</label>
+            <label class="arrow right a3" for="s4">›</label>
+
+            <label class="arrow left a4" for="s3">‹</label>
+            <label class="arrow right a4" for="s1">›</label>
+          </div>
+
+          <div class="carousel-dots" aria-label="Slide controls">
+            <label class="dot" for="s1" aria-label="Slide 1"></label>
+            <label class="dot" for="s2" aria-label="Slide 2"></label>
+            <label class="dot" for="s3" aria-label="Slide 3"></label>
+            <label class="dot" for="s4" aria-label="Slide 4"></label>
           </div>
         </div>
       </section>
@@ -72,9 +115,7 @@
       <section class="content-grid">
         <section class="panel">
           <h2>Featured Genres</h2>
-          <p class="muted">
-            Choose a genre and start exploring recommendations and new series.
-          </p>
+          <p class="muted">Choose a genre and start exploring recommendations and new series.</p>
 
           <div class="chips">
             <a class="chip" href="romance.html">Romance</a>
@@ -86,7 +127,7 @@
 
         <section class="panel">
           <h2>Popular Recommendations</h2>
-          <p class="muted">Some standout series featured on this site.</p>
+          <p class="muted">Some standout genre picks featured on this site.</p>
 
           <ul class="rec-list">
             <li><span class="rec-title"><a href="action.html">Solo Leveling</a></span><span class="rec-tag">Action</span></li>
