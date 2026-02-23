@@ -198,8 +198,9 @@ body {
   border: 1px solid rgba(255,255,255,0.15);
   padding: 22px;
   vertical-align: top;
-  word-wrap: break-word;
-  overflow-wrap: anywhere;
+
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .anime-table th {
@@ -232,7 +233,17 @@ body {
   font-weight: 800;
   font-size: 22px;
 }
+.anime-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  font-weight: 800;
+  font-size: 22px;
+}
 
+.anime-cell .anime-title {
+  white-space: nowrap;
+}
 .anime-img {
   width: 140px;
   border-radius: 12px;
