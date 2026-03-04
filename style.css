@@ -659,6 +659,7 @@ footer {
   .banner-card{ max-width: 92%; }
   .banner-subtitle{ margin-left: auto; margin-right: auto; }
 }
+ 
   .banner-text{
   position:absolute;
   top:55%;
@@ -668,12 +669,17 @@ footer {
   color:white;
 }
 
-.banner-text h1{
-  font-size:3rem;
-  text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+.hero-title{
+  font-size:4rem;
+  letter-spacing:4px;
+  margin:0;
+  text-shadow:
+    0 0 10px rgba(108,99,255,0.7),
+    0 0 25px rgba(255,77,141,0.5);
 }
 
 .banner-text p{
+  margin-top:20px;
   font-size:1.2rem;
   text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
