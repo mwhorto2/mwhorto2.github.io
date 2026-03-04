@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anime Voyage | Action</title>
+  <title>Anime Voyage| Action</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,39 +14,207 @@
       <h1 class="site-title">Anime Voyage</h1>
     </header>
 
-<nav class="site-nav">
-  <a href="index.html">Home</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
 
-  <details class="menu">
-    <summary>Genres ▾</summary>
-    <div class="menu-panel">
-      <a href="romance.html">Romance</a>
-      <a href="fantasy.html">Fantasy</a>
-      <a href="action.html">Action</a>
-      <a href="SOL.html">Slice of Life</a>
-    </div>
-  </details>
+      <details class="menu">
+        <summary>Genres ▾</summary>
+        <div class="menu-panel">
+          <a href="romance.html">Romance</a>
+          <a href="fantasy.html">Fantasy</a>
+          <a href="action.html">Action</a>
+          <a href="SOL.html">Slice of Life</a>
+        </div>
+      </details>
 
-  <a href="contact.html">Contact</a>
-</nav>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-<script>
-document.addEventListener("click", function(e){
-  const menu = document.querySelector(".menu");
-  if(menu && !menu.contains(e.target)){
-    menu.removeAttribute("open");
-  }
-});
-</script>
-
+    <script>
+      document.addEventListener("click", function(e){
+        const menu = document.querySelector(".menu");
+        if(menu && !menu.contains(e.target)){
+          menu.open = false;
+        }
+      });
+    </script>
 
     <main>
-      <section class="feature">
-        <h2>Action Anime</h2>
-        <p>
-          Explore fast-paced stories filled with intense battles, thrilling action sequences,
-          and dynamic characters.
-        </p>
+      <section class="hero hero-action">
+        <div class="hero-inner">
+          <h2>Action Anime</h2>
+          <p>
+            Big fights, high stakes, and characters who refuse to give up.
+            If you want adrenaline, power-ups, and nonstop intensity, action is the move.
+          </p>
+          <a class="hero-btn" href="#lineup">Jump to the lineup</a>
+        </div>
+      </section>
+
+      <section class="anime-table-section" id="lineup">
+        <div class="table-box">
+          <h3>Action Anime Lineup</h3>
+
+          <div class="table-wrap">
+            <table class="anime-table">
+
+              <thead>
+                <tr>
+                  <th>Anime</th>
+                  <th>Genres</th>
+                  <th>Where to Watch</th>
+                  <th>About the Story</th>
+                  <th>Trailer</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="darlingfranxx.jpg" alt="Darling in the Franxx" class="anime-img">
+                    Darling in the Franxx
+                  </td>
+                  <td>
+                    <a href="action.html">Action</a>, Sci-Fi, Mecha
+                  </td>
+                  <td>
+                    <a href="https://www.crunchyroll.com/series/GY8VEQ95Y/darling-in-the-franxx" target="_blank">Crunchyroll</a>
+                  </td>
+                  <td>
+                    In a distant future, humanity survives behind massive walls while monsters called
+                    Klaxosaurs threaten everything outside. To fight back, teens are trained to pilot
+                    giant mechs known as Franxx — but they can only operate them in pairs, meaning trust
+                    and teamwork are literally life-or-death.
+                    <br><br>
+                    Hiro, a former prodigy, has lost his confidence and purpose… until he meets Zero Two,
+                    a mysterious elite pilot with a dangerous reputation. Their partnership sparks rumors,
+                    jealousy, and nonstop conflict, but it also forces Hiro to confront who he is and what
+                    he’s willing to sacrifice.
+                    <br><br>
+                    <strong>Main characters:</strong> Hiro, Zero Two, Ichigo
+                    <br><br>
+                    <em>If you like:</em> Stranger Things or The Hunger Games,
+                    you’ll enjoy the mix of survival pressure, teamwork, and emotional character drama.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/xiNeXCUosSg"
+                      title="Darling in the Franxx Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="sololeveling.jpg" alt="Solo Leveling" class="anime-img">
+                    Solo Leveling
+                  </td>
+                  <td>
+                    <a href="action.html">Action</a>, Fantasy
+                  </td>
+                  <td>
+                    <a href="https://www.crunchyroll.com/series/GDKHZEJ0K/solo-leveling" target="_blank">Crunchyroll</a>
+                  </td>
+                  <td>
+                    When portals to deadly dungeons begin appearing around the world, “Hunters” are the only
+                    people strong enough to enter and survive. Sung Jinwoo is known as the weakest hunter —
+                    constantly injured, underestimated, and barely scraping by.
+                    <br><br>
+                    After a brutal raid goes wrong, Jinwoo wakes up with a mysterious system that lets him
+                    level up like a video game — something no hunter should be able to do. As he grows stronger,
+                    he uncovers hidden threats behind the dungeons and realizes his new power comes with its own
+                    terrifying price.
+                    <br><br>
+                    <strong>Main characters:</strong> Sung Jinwoo, Cha Hae-In, Yoo Jinho
+                    <br><br>
+                    <em>If you like:</em> John Wick or The Witcher,
+                    you’ll love watching a main character go from underestimated to unstoppable.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/ujv2fLpQxQw"
+                      title="Solo Leveling Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="kaiju8.jpg" alt="Kaiju No. 8" class="anime-img">
+                    Kaiju No. 8
+                  </td>
+                  <td>
+                    <a href="action.html">Action</a>, Sci-Fi
+                  </td>
+                  <td>
+                    <a href="https://www.crunchyroll.com/series/GG5H5XQ7D/kaiju-no-8" target="_blank">Crunchyroll</a>
+                  </td>
+                  <td>
+                    In Japan, giant monsters called Kaiju attack cities without warning, and the Defense Force
+                    is responsible for taking them down. Kafka Hibino works in kaiju cleanup — the job that deals
+                    with the aftermath — but he’s always dreamed of fighting on the front lines.
+                    <br><br>
+                    Just when he’s ready to give up, Kafka gains the ability to transform into a kaiju himself.
+                    Now he has to hide his identity, control his power, and prove he can fight for humanity without
+                    becoming the thing everyone fears.
+                    <br><br>
+                    <strong>Main characters:</strong> Kafka Hibino, Mina Ashiro, Reno Ichikawa
+                    <br><br>
+                    <em>If you like:</em> Pacific Rim or Godzilla,
+                    you’ll enjoy huge monster battles, squads, and big “save the city” moments.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/3WfJ6d6mVfA"
+                      title="Kaiju No. 8 Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="gachiakuta.jpg" alt="Gachiakuta" class="anime-img">
+                    Gachiakuta
+                  </td>
+                  <td>
+                      <a href="action.html">Action</a>,
+                      <a href="fantasy.html">Fantasy</a>
+                  </td>
+                  <td>
+                    <a href="https://www.crunchyroll.com/series/GP5HJ84P7/gachiakuta" target="_blank">Crunchyroll</a>
+                  </td>
+                  <td>
+                    Rudo lives on the edge of society, looked down on for where he comes from and what people
+                    assume about him. When he’s falsely accused and thrown into a massive “pit” beneath the city,
+                    he enters a brutal world built out of waste, monsters, and people who had to get dangerous to survive.
+                    <br><br>
+                    In the pit, Rudo discovers that discarded objects can carry power — and that the world above
+                    is far more corrupt than he ever realized. To survive and get revenge, he’ll have to fight smarter,
+                    get stronger, and decide what kind of person he wants to become.
+                    <br><br>
+                    <strong>Main characters:</strong> Rudo
+                    <br><br>
+                    <em>If you like:</em> The Walking Dead or Mad Max: Fury Road,
+                    you’ll enjoy the gritty survival energy and revenge-driven story.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/6cX6oQ8cQm8"
+                      title="Gachiakuta Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
       </section>
     </main>
 
