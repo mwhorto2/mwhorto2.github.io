@@ -87,7 +87,13 @@ main{
   color:var(--accent);
   transform:translateY(-2px);
 }
+.menu summary {
+  list-style: none;
+}
 
+.menu summary::-webkit-details-marker {
+  display: none;
+}
 /* HERO */
 
 .hero{
