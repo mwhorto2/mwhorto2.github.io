@@ -155,6 +155,14 @@ main{
   background: linear-gradient(90deg,var(--primary),var(--accent));
   color: white;
 }
+.menu-panel{
+  animation: menuFade .2s ease;
+}
+
+@keyframes menuFade{
+  from{opacity:0; transform:translateY(-5px);}
+  to{opacity:1; transform:translateY(0);}
+}
 /* HERO */
 
 .hero{
