@@ -560,34 +560,102 @@ footer {
     width:360px;
   }
 
-  .anime-table td iframe{
-    max-width:360px;
-  }
- .video-banner {
+.video-banner{
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 360px;
   overflow: hidden;
-  margin-top: 100px;
-}
-.video-banner video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  opacity: 0.6;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: #000;
 }
 
-.banner-text {
+.video-banner video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  opacity: 0.85;
+}
+
+/* professional readability overlay */
+.video-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.65), rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.45)),
+    radial-gradient(circle at 30% 30%, rgba(108,99,255,0.25), transparent 55%),
+    radial-gradient(circle at 70% 70%, rgba(255,77,141,0.18), transparent 55%);
+  pointer-events:none;
+}
+
+.banner-content{
   position: relative;
   z-index: 2;
-  text-align: center;
-  top: 40%;
-  transform: translateY(-40%);
-  color: white;
-  text-shadow: 2px 2px 6px black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 24px;
 }
+
+.banner-card{
+  max-width: 520px;
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background: rgba(21, 25, 51, 0.55);
+  border: 1px solid var(--border2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.banner-eyebrow{
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.banner-title{
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+  line-height: 1.15;
+  color: var(--text);
+  text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+.banner-subtitle{
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.45;
+  max-width: 46ch;
+}
+
+.banner-btn{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+}
+
+.banner-btn:hover{
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* responsive: smaller height + centered card */
+@media (max-width: 700px){
+  .video-banner{ height: 280px; }
+  .banner-content{ justify-content: center; text-align: center; }
+  .banner-card{ max-width: 92%; }
+  .banner-subtitle{ margin-left: auto; margin-right: auto; }
 }
