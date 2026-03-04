@@ -94,6 +94,67 @@ main{
 .menu summary::-webkit-details-marker {
   display: none;
 }
+/* ===== GENRES DROPDOWN ===== */
+
+.menu {
+  position: relative;
+}
+
+/* hide default triangle */
+.menu summary {
+  list-style: none;
+}
+
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+/* dropdown container */
+
+.menu-panel {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(15,18,38,0.95);
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.45);
+}
+
+/* hide when closed */
+
+.menu:not([open]) .menu-panel {
+  display: none;
+}
+
+/* dropdown links */
+
+.menu-panel a {
+  padding: 14px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: 0.2s;
+}
+
+/* last link */
+
+.menu-panel a:last-child {
+  border-bottom: none;
+}
+
+/* hover effect */
+
+.menu-panel a:hover {
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+  color: white;
+}
 /* HERO */
 
 .hero{
