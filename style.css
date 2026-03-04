@@ -89,6 +89,7 @@ main{
   transform:translateY(-2px);
   text-shadow:0 0 10px rgba(255,77,141,0.7);
 }
+
 .menu summary {
   list-style: none;
 }
@@ -115,13 +116,13 @@ main{
   color:var(--accent);
   transform:translateY(-2px);
 }
+
 /* ===== GENRES DROPDOWN ===== */
 
 .menu {
   position: relative;
 }
 
-/* hide default triangle */
 .menu summary {
   list-style: none;
 }
@@ -176,6 +177,7 @@ main{
   background: linear-gradient(90deg,var(--primary),var(--accent));
   color: white;
 }
+
 .menu-panel{
   animation: menuFade .2s ease;
 }
@@ -184,6 +186,7 @@ main{
   from{opacity:0; transform:translateY(-5px);}
   to{opacity:1; transform:translateY(0);}
 }
+
 /* HERO */
 
 .hero{
@@ -227,8 +230,6 @@ main{
 
 /* TABLE */
 
-/* TABLE */
-
 .table-wrap{
   width:100%;
   overflow-x:auto;
@@ -246,7 +247,7 @@ main{
   padding:22px;
 }
 
-/* KEY FIX: keep content at the TOP of each cell */
+/* keep content at the TOP of each cell */
 .anime-table td{
   font-size:20px;
   vertical-align: top;
@@ -258,14 +259,20 @@ main{
   vertical-align: middle;
 }
 
-/* Make the first column look like your screenshot goal: image + title aligned nicely */
+/* Trailer column width so videos aren't tiny */
+.anime-table th:nth-child(5),
+.anime-table td:nth-child(5){
+  width:360px;
+}
+
+/* first column: image + title aligned */
 .anime-cell{
   display:flex;
   align-items:flex-start;
   gap:16px;
 }
 
-/* Control poster size so it doesn't create weird row heights */
+/* poster size */
 .anime-img{
   width:140px;
   height:200px;
@@ -276,9 +283,11 @@ main{
   flex:0 0 auto;
 }
 
-/* Make iframe consistent and not force insane row spacing */
-.anime-table iframe{
+/* iframe size (this fixes the "really small" issue) */
+.anime-table td iframe{
+  display:block;
   width:100%;
+  max-width:360px;
   aspect-ratio:16/9;
   height:auto;
   border:0;
@@ -286,7 +295,7 @@ main{
   background:rgba(0,0,0,0.25);
 }
 
-/* Optional: make links readable on dark background */
+/* links */
 .anime-table a{
   color:var(--primary);
   font-weight:700;
@@ -377,23 +386,15 @@ main{
   box-shadow: 0 10px 25px rgba(0,0,0,.5);
 }
 
-/* arrow hover glow */
-
 .carousel-arrows label:hover{
   background: linear-gradient(90deg,var(--primary),var(--accent));
   transform: translateY(-50%) scale(1.1);
 }
 
-/* arrow positions */
-
 .carousel-arrows .left{ left:20px; }
 .carousel-arrows .right{ right:20px; }
 
-/* hide all arrows by default */
-
 .carousel-arrows label{ display:none; }
-
-/* show correct arrows per slide */
 
 #s1:checked ~ .carousel-arrows .a1{ display:flex; }
 #s2:checked ~ .carousel-arrows .a2{ display:flex; }
@@ -442,41 +443,108 @@ main{
   background:linear-gradient(135deg,rgba(21,25,51,.85),rgba(255,77,141,.18));
 }
 
-/* MOBILE */
+/* ===== RESPONSIVE (like the case study) ===== */
 
-@media(max-width:900px){
+/* SMALL: phones */
+@media (max-width: 600px){
 
-.site-title{font-size:54px;}
+  #wrapper{ width:92%; padding:16px; }
 
-.site-nav{
-right:16px;
-gap:18px;
+  .site-title{ font-size:40px; }
+
+  .site-nav{
+    right:14px;
+    gap:14px;
+  }
+
+  .site-nav a,
+  .site-nav summary{
+    font-size:18px;
+  }
+
+  .menu-panel a{ font-size:16px; padding:12px 14px; }
+
+  .hero{ padding:34px 18px; }
+  .hero h2{ font-size:32px; }
+  .hero p{ font-size:16px; }
+
+  .anime-table{
+    min-width:900px;
+  }
+
+  .anime-table th,
+  .anime-table td{
+    padding:16px;
+  }
+
+  .anime-img{
+    width:110px;
+    height:160px;
+  }
+
+  .anime-table th:nth-child(5),
+  .anime-table td:nth-child(5){
+    width:300px;
+  }
+
+  .anime-table td iframe{
+    max-width:300px;
+  }
+
+  .carousel-viewport{ height:300px; }
+
+  .carousel-arrows label{
+    width:44px;
+    height:44px;
+    font-size:24px;
+  }
 }
 
-.site-nav a{
-font-size:20px;
+/* MEDIUM: tablets */
+@media (min-width: 601px) and (max-width: 1024px){
+
+  #wrapper{ width:94%; }
+
+  .site-title{ font-size:56px; }
+
+  .site-nav{
+    right:18px;
+    gap:20px;
+  }
+
+  .site-nav a,
+  .site-nav summary{
+    font-size:22px;
+  }
+
+  .hero{ padding:46px 28px; }
+  .hero h2{ font-size:42px; }
+  .hero p{ font-size:18px; }
+
+  .anime-table{
+    min-width:1050px;
+  }
+
+  .anime-table th:nth-child(5),
+  .anime-table td:nth-child(5){
+    width:340px;
+  }
+
+  .anime-table td iframe{
+    max-width:340px;
+  }
+
+  .carousel-viewport{ height:420px; }
 }
 
-.hero{
-padding:44px 24px;
-}
+/* LARGE: desktop (your current look) */
+@media (min-width: 1025px){
+  .anime-table th:nth-child(5),
+  .anime-table td:nth-child(5){
+    width:360px;
+  }
 
-.hero h2{
-font-size:40px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-.carousel-viewport{
-height:380px;
-}
-
-.carousel-arrows label{
-width:48px;
-height:48px;
-font-size:26px;
-}
-
+  .anime-table td iframe{
+    max-width:360px;
+  }
 }
