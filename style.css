@@ -23,7 +23,7 @@ body{
   background-attachment:fixed;
 }
 
-/* Push all content down so it doesn't sit under the fixed nav */
+/* Push content down so it clears the fixed brand + fixed nav */
 #wrapper{
   width:95%;
   max-width:1500px;
@@ -37,34 +37,50 @@ main{
   gap:22px;
 }
 
-/* HEADER */
+/* ===== FIXED TOP-LEFT BRAND (HOME BUTTON) ===== */
 .site-header{
-  text-align:center;
-  margin-top:0;
-  margin-bottom:20px;
+  position:fixed;
+  top:18px;
+  left:28px;
+  z-index:10000;
+  margin:0;
+  padding:0;
+  text-align:left;
 }
 
-.site-title{
-  margin:0;
-  font-size:72px;
+.brand-link,
+.brand-link:visited{
+  display:inline-block;
+  text-decoration:none;
+  color:white;
   font-weight:900;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:white;
+  font-size:34px;
+  line-height:1;
   text-shadow:0 10px 34px rgba(108,99,255,0.55);
 }
 
-.site-title::after{
+/* underline bar under the brand */
+.brand-link::after{
   content:"";
   display:block;
-  width:150px;
+  width:110px;
   height:5px;
-  margin:14px auto 0;
+  margin-top:10px;
   background:linear-gradient(90deg,var(--primary),var(--accent));
   border-radius:8px;
 }
 
-/* NAV */
+/* optional hover (doesn't affect visited color) */
+.brand-link:hover{
+  transform:translateY(-1px);
+  text-shadow:
+    0 10px 34px rgba(108,99,255,0.55),
+    0 0 14px rgba(255,77,141,0.55);
+}
+
+/* ===== NAV (top-right) ===== */
 .site-nav{
   position:fixed;
   top:18px;
@@ -80,6 +96,10 @@ main{
   font-size:26px;
   color:white;
   transition:.2s;
+}
+
+.site-nav a:visited{
+  color:white;
 }
 
 .site-nav a:hover,
@@ -152,12 +172,10 @@ main{
   transition:0.2s;
 }
 
-/* last link */
 .menu-panel a:last-child{
   border-bottom:none;
 }
 
-/* hover effect */
 .menu-panel a:hover{
   background:linear-gradient(90deg,var(--primary),var(--accent));
   color:white;
@@ -190,7 +208,6 @@ main{
   opacity:0.85;
 }
 
-/* overlay for readability */
 .video-banner::after{
   content:"";
   position:absolute;
@@ -202,7 +219,6 @@ main{
   pointer-events:none;
 }
 
-/* center text on top of video */
 .banner-text{
   position:absolute;
   inset:0;
@@ -345,6 +361,10 @@ main{
   text-decoration:none;
 }
 
+.anime-table a:visited{
+  color:var(--primary);
+}
+
 .anime-table a:hover{
   color:var(--accent);
   text-decoration:underline;
@@ -484,6 +504,10 @@ footer a{
   text-decoration:none;
 }
 
+footer a:visited{
+  color:var(--accent);
+}
+
 footer a:hover{
   color:var(--primary);
   text-decoration:underline;
@@ -497,21 +521,15 @@ footer{
 }
 
 /* ===== RESPONSIVE ===== */
-
-/* SMALL: phones */
 @media (max-width: 600px){
   #wrapper{ width:92%; padding:110px 16px 16px; }
-  .site-title{ font-size:40px; }
 
-  .site-nav{
-    right:14px;
-    gap:14px;
-  }
+  .site-header{ left:14px; }
+  .brand-link, .brand-link:visited{ font-size:22px; }
+  .brand-link::after{ width:86px; }
 
-  .site-nav a,
-  .site-nav summary{
-    font-size:18px;
-  }
+  .site-nav{ right:14px; gap:14px; }
+  .site-nav a, .site-nav summary{ font-size:18px; }
 
   .menu-panel a{ font-size:16px; padding:12px 14px; }
 
@@ -523,40 +541,24 @@ footer{
   .hero p{ font-size:16px; }
 
   .anime-table{ min-width:900px; }
-
-  .anime-table th,
-  .anime-table td{ padding:16px; }
-
+  .anime-table th, .anime-table td{ padding:16px; }
   .anime-img{ width:110px; height:160px; }
 
-  .anime-table th:nth-child(5),
-  .anime-table td:nth-child(5){ width:300px; }
-
+  .anime-table th:nth-child(5), .anime-table td:nth-child(5){ width:300px; }
   .anime-table td iframe{ max-width:300px; }
 
   .carousel-viewport{ height:300px; }
-
-  .carousel-arrows label{
-    width:44px;
-    height:44px;
-    font-size:24px;
-  }
+  .carousel-arrows label{ width:44px; height:44px; font-size:24px; }
 }
 
-/* MEDIUM: tablets */
 @media (min-width: 601px) and (max-width: 1024px){
   #wrapper{ width:94%; padding:120px 20px 20px; }
-  .site-title{ font-size:56px; }
 
-  .site-nav{
-    right:18px;
-    gap:20px;
-  }
+  .brand-link, .brand-link:visited{ font-size:28px; }
+  .brand-link::after{ width:96px; }
 
-  .site-nav a,
-  .site-nav summary{
-    font-size:22px;
-  }
+  .site-nav{ right:18px; gap:20px; }
+  .site-nav a, .site-nav summary{ font-size:22px; }
 
   .video-banner{ height:320px; }
   .hero-title{ font-size:3.2rem; }
@@ -566,16 +568,12 @@ footer{
   .hero p{ font-size:18px; }
 
   .anime-table{ min-width:1050px; }
-
-  .anime-table th:nth-child(5),
-  .anime-table td:nth-child(5){ width:340px; }
-
+  .anime-table th:nth-child(5), .anime-table td:nth-child(5){ width:340px; }
   .anime-table td iframe{ max-width:340px; }
 
   .carousel-viewport{ height:420px; }
 }
 
-/* LARGE: desktop */
 @media (min-width: 1025px){
   .anime-table th:nth-child(5),
   .anime-table td:nth-child(5){
