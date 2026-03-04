@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anime Voyage | Slice of Life</title>
+  <title>Anime Voyage| Slice of Life</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,39 +13,204 @@
     <header class="site-header">
       <h1 class="site-title">Anime Voyage</h1>
     </header>
-<nav class="site-nav">
-  <a href="index.html">Home</a>
 
-  <details class="menu">
-    <summary>Genres ▾</summary>
-    <div class="menu-panel">
-      <a href="romance.html">Romance</a>
-      <a href="fantasy.html">Fantasy</a>
-      <a href="action.html">Action</a>
-      <a href="SOL.html">Slice of Life</a>
-    </div>
-  </details>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
 
-  <a href="contact.html">Contact</a>
-</nav>
+      <details class="menu">
+        <summary>Genres ▾</summary>
+        <div class="menu-panel">
+          <a href="romance.html">Romance</a>
+          <a href="fantasy.html">Fantasy</a>
+          <a href="action.html">Action</a>
+          <a href="SOL.html">Slice of Life</a>
+        </div>
+      </details>
 
-<script>
-document.addEventListener("click", function(e){
-  const menu = document.querySelector(".menu");
-  if(menu && !menu.contains(e.target)){
-    menu.removeAttribute("open");
-  }
-});
-</script>
+      <a href="contact.html">Contact</a>
+    </nav>
 
+    <script>
+      document.addEventListener("click", function(e){
+        const menu = document.querySelector(".menu");
+        if(menu && !menu.contains(e.target)){
+          menu.open = false;
+        }
+      });
+    </script>
 
     <main>
-      <section class="feature">
-        <h2>Slice of Life Anime</h2>
-        <p>
-            Explore everyday stories that focus on character development,
-            relationships, and the beauty of ordinary life.
-        </p>
+      <section class="hero hero-sol">
+        <div class="hero-inner">
+          <h2>Slice of Life Anime</h2>
+          <p>
+            Comfort shows, real emotions, and characters you end up caring about for no reason.
+            Slice of life is for when you want something meaningful without nonstop chaos.
+          </p>
+          <a class="hero-btn" href="#lineup">Jump to the lineup</a>
+        </div>
+      </section>
+
+      <section class="anime-table-section" id="lineup">
+        <div class="table-box">
+          <h3>Slice of Life Anime Lineup</h3>
+
+          <div class="table-wrap">
+            <table class="anime-table">
+
+              <thead>
+                <tr>
+                  <th>Anime</th>
+                  <th>Genres</th>
+                  <th>Where to Watch</th>
+                  <th>About the Story</th>
+                  <th>Trailer</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="asilentvoice.jpg" alt="A Silent Voice" class="anime-img">
+                    A Silent Voice
+                  </td>
+                  <td>
+                    <a href="SOL.html">Slice of Life</a>, Drama
+                  </td>
+                  <td>
+                    <a href="https://www.netflix.com/" target="_blank">Netflix</a><br>
+                    <a href="https://www.crunchyroll.com/" target="_blank">Crunchyroll</a>
+                  </td>
+                  <td>
+                    Shoya Ishida spends his childhood bullying a deaf classmate, Shoko Nishimiya, until the
+                    guilt follows him for years. Now older and struggling with loneliness, Shoya tries to
+                    make things right and reconnect with Shoko — even though the damage from the past is still there.
+                    <br><br>
+                    The story focuses on apology, healing, and what it really means to change when you can’t undo
+                    what happened. It’s emotional, realistic, and handles friendship and self-worth in a way that
+                    feels painfully honest.
+                    <br><br>
+                    <strong>Main characters:</strong> Shoya Ishida, Shoko Nishimiya
+                    <br><br>
+                    <em>If you like:</em> The Perks of Being a Wallflower or 13 Reasons Why,
+                    you’ll like the heavy emotions, growth, and second-chance themes.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/nfK6UgLra7g"
+                      title="A Silent Voice Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="yourname.jpg" alt="Your Name" class="anime-img">
+                    Your Name
+                  </td>
+                  <td>
+                    <a href="SOL.html">Slice of Life</a>, Romance, Fantasy
+                  </td>
+                  <td>
+                    <a href="https://www.netflix.com/" target="_blank">Netflix</a><br>
+                    <a href="https://www.crunchyroll.com/" target="_blank">Crunchyroll</a>
+                  </td>
+                  <td>
+                    Two teenagers, Mitsuha and Taki, start waking up in each other’s bodies without warning.
+                    At first it’s funny and chaotic, but they slowly learn how to live each other’s lives —
+                    and they begin forming a connection they can’t explain.
+                    <br><br>
+                    When the body-switching suddenly stops, Taki realizes something bigger is going on, and he
+                    becomes determined to find Mitsuha even if it means chasing a memory that feels impossible.
+                    It’s part romance, part mystery, and somehow still feels super grounded.
+                    <br><br>
+                    <strong>Main characters:</strong> Mitsuha Miyamizu, Taki Tachibana
+                    <br><br>
+                    <em>If you like:</em> The Notebook or The Time Traveler’s Wife,
+                    you’ll like the fate-driven romance and emotional “I have to find you” storyline.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/xU47nhruN-Q"
+                      title="Your Name Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="kotaro.jpg" alt="Kotaro Lives Alone" class="anime-img">
+                    Kotaro Lives Alone
+                  </td>
+                  <td>
+                    <a href="SOL.html">Slice of Life</a>, Comedy, Drama
+                  </td>
+                  <td>
+                    <a href="https://www.netflix.com/title/81275353" target="_blank">Netflix</a>
+                  </td>
+                  <td>
+                    Kotaro is a tiny kid who moves into an apartment complex… alone. His neighbor, a struggling manga
+                    artist, ends up slowly becoming part of Kotaro’s life along with the other residents in the building.
+                    <br><br>
+                    On the surface it’s funny and cute, but the show hits hard because Kotaro’s “independence” comes
+                    from things no kid should have to go through. It’s about found family, adults trying to do better,
+                    and how small kindnesses actually matter.
+                    <br><br>
+                    <strong>Main characters:</strong> Kotaro Sato, Shin Karino
+                    <br><br>
+                    <em>If you like:</em> Modern Family or This Is Us,
+                    you’ll like the mix of humor and emotional moments about family and healing.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/1d8K0g3nY9E"
+                      title="Kotaro Lives Alone Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="anime-cell">
+                    <img src="aggretsuko.jpg" alt="Aggretsuko" class="anime-img">
+                    Aggretsuko
+                  </td>
+                  <td>
+                    <a href="SOL.html">Slice of Life</a>, Comedy
+                  </td>
+                  <td>
+                    <a href="https://www.netflix.com/title/80198505" target="_blank">Netflix</a>
+                  </td>
+                  <td>
+                    Retsuko is a quiet office worker who deals with annoying coworkers, a terrible boss, and the
+                    exhausting “adulting” routine. Her secret coping method? Screaming death metal at karaoke after work.
+                    <br><br>
+                    The show is hilarious, but it’s also super relatable if you’ve ever felt stuck in a job, pressured
+                    by expectations, or like you’re trying to keep it together while everything is annoying. It’s basically
+                    workplace stress turned into comedy.
+                    <br><br>
+                    <strong>Main characters:</strong> Retsuko, Haida, Ton
+                    <br><br>
+                    <em>If you like:</em> The Office or Parks and Recreation,
+                    you’ll like the workplace chaos and character comedy.
+                  </td>
+                  <td>
+                    <iframe
+                      src="https://www.youtube.com/embed/2xZ8pLRTJUA"
+                      title="Aggretsuko Trailer"
+                      allowfullscreen>
+                    </iframe>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+        </div>
       </section>
     </main>
 
