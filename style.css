@@ -208,40 +208,56 @@ main{
 #s3:checked ~ .carousel-viewport .carousel-track{transform:translateX(-50%);}
 #s4:checked ~ .carousel-viewport .carousel-track{transform:translateX(-75%);}
 
-/* ARROWS */
+/* ===== CAROUSEL ARROWS  ===== */
 
-.carousel-arrows{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 20px;
-  pointer-events:none;
+.carousel-arrows {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
 }
 
-.carousel-arrows label{
-  pointer-events:auto;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:rgba(10,12,28,0.9);
-  border:1px solid rgba(255,255,255,0.2);
-  color:white;
-  font-size:34px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition:.25s;
-  box-shadow:0 10px 25px rgba(0,0,0,.5);
+.carousel-arrows label {
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(10,12,28,0.9);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 10px 25px rgba(0,0,0,.5);
 }
+
+/* arrow hover glow */
 
 .carousel-arrows label:hover{
-  background:linear-gradient(90deg,var(--primary),var(--accent));
-  transform:scale(1.1);
-  box-shadow:0 0 20px rgba(255,77,141,.6);
+  background: linear-gradient(90deg,var(--primary),var(--accent));
+  transform: translateY(-50%) scale(1.1);
 }
+
+/* arrow positions */
+
+.carousel-arrows .left{ left:20px; }
+.carousel-arrows .right{ right:20px; }
+
+/* hide all arrows by default */
+
+.carousel-arrows label{ display:none; }
+
+/* show correct arrows per slide */
+
+#s1:checked ~ .carousel-arrows .a1{ display:flex; }
+#s2:checked ~ .carousel-arrows .a2{ display:flex; }
+#s3:checked ~ .carousel-arrows .a3{ display:flex; }
+#s4:checked ~ .carousel-arrows .a4{ display:flex; }
 
 /* DOTS */
 
